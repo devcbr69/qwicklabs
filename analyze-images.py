@@ -20,13 +20,7 @@ if len(sys.argv)<3:
     print ('python3 '+sys.argv[0]+ '[PROJECT_NAME] [BUCKET_NAME]')
     exit()
 
-project_name = sys.argv[1]
-bucket_name = sys.argv[2]
 
-# Set up our GCS, BigQuery, and Natural Language clients
-storage_client = storage.Client()
-bq_client = bigquery.Client(project=project_name)
-nl_client = language.LanguageServiceClient()
 
 # Set up client objects for the vision and translate_v2 API Libraries
 vision_client = vision.ImageAnnotatorClient()
